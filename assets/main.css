@@ -1,0 +1,56 @@
+.box {
+	width: 100%;
+	border: 1px solid #f6f6f6;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 0.75rem;
+}
+
+.box .form-group {
+	padding: 1rem;
+	width: 100%;
+}
+
+.box .order {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem 0.5rem 0 0.5rem;
+	background: #f2f2f2;
+}
+
+.box .order button {
+	margin: 0.25rem 0.25rem;
+	padding: 0.5rem 0.25rem;
+	width: 100%;
+}
+
+input.item, textarea.item {
+	width: 100%;
+	margin: 0.25rem 0 1rem 0;
+	padding: 0.25em;
+	font-size: 1rem;
+}
+
+input, textarea {
+	margin-bottom: 0.25rem;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+.image {
+	max-width: 200px;
+	height: auto;
+}
+
+.preview-img {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.deleted {
+	background: #f815375c;
+}

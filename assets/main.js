@@ -3,7 +3,7 @@ jQuery(function ($) {
   var container = $('.sortable-container');
   setIndex()
 
-  container.delegate('.box', 'mouseenter mouseout', handleMouse);
+  container.delegate('.wis-box', 'mouseenter mouseout', handleMouse);
   container.sortable({
     update: function () {
       setIndex()
@@ -15,7 +15,7 @@ jQuery(function ($) {
 
     var btn = $(this)
     var val = btn.val()
-    var item = btn.closest('.box')
+    var item = btn.closest('.wis-box')
     if (val == 'up')
       moveUp(item)
     else if (val == 'down')
@@ -38,8 +38,8 @@ jQuery(function ($) {
   }
 
   function setIndex() {
-    $('.item').each(function () {
-      var index = $(this).closest('.box').index()
+    $('.wis-item').each(function () {
+      var index = $(this).closest('.wis-box').index()
       var index = index + 1
       var name = $(this).attr('data-id')
       $(this).not('.btn').attr('id', name + '_' + index)
@@ -48,7 +48,7 @@ jQuery(function ($) {
       $(this).filter('.count').html(index)
     })
 
-    var box_count = $('.box').length
+    var box_count = $('.wis-box').length
     $('#count').attr('value', box_count)
   }
 

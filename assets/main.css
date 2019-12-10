@@ -1,4 +1,4 @@
-.box {
+.wis-box {
 	width: 100%;
 	border: 1px solid #f6f6f6;
 	display: flex;
@@ -6,12 +6,12 @@
 	margin-bottom: 0.75rem;
 }
 
-.box .form-group {
+.wis-box .wis-form-group {
 	padding: 1rem;
 	width: 100%;
 }
 
-.box .order {
+.wis-box .wis-order {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -19,13 +19,13 @@
 	background: #f2f2f2;
 }
 
-.box .order button {
+.wis-box .wis-order button {
 	margin: 0.25rem 0.25rem;
 	padding: 0.5rem 0.25rem;
 	width: 100%;
 }
 
-input.item, textarea.item {
+input.wis-item, textarea.wis-item {
 	width: 100%;
 	margin: 0.25rem 0 1rem 0;
 	padding: 0.25em;
@@ -36,21 +36,21 @@ input, textarea {
 	margin-bottom: 0.25rem;
 }
 
-label {
+label.wis {
 	display: block;
 	font-weight: bold;
 }
 
-.image {
+.wis-image {
 	max-width: 200px;
 	height: auto;
 }
 
-.preview-img {
+.wis-preview-img {
 	display: block;
 	margin-bottom: 1rem;
 }
 
-.deleted {
+.wis-deleted {
 	background: #f815375c;
 }

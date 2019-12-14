@@ -179,21 +179,22 @@ if ( ! class_exists( 'Plugin_Name_Admin' ) ) :
 
 				<?php for ( $i = 1; $i <= $count; $i++ ) : ?>
 					<?php $image_id = $fields[ 'file_image_' . $i ]; ?>
-					<div class="box">
-						<div class="form-group">
+					<div class="wis-box">
+						<div class="wis-form-group">
 							<label for="name">Name</label>
-							<input type="text" class="item name" data-id="name" value="<?php echo esc_attr( $fields[ 'name_' . $i ] ); ?>">
+							<input type="text" class="wis-item name" data-id="name" value="<?php echo esc_attr( $fields[ 'name_' . $i ] ); ?>">
 							<label for=" title">Title</label>
-							<input type="text" class="item title" data-id="title" value="<?php echo esc_attr( $fields[ 'title_' . $i ] ); ?>">
+							<input type="text" class="wis-item title" data-id="title" value="<?php echo esc_attr( $fields[ 'title_' . $i ] ); ?>">
 							<label for="name">Beschreibung</label>
-							<textarea name="description" class="item description" data-id="description" cols="3" rows="3"><?php echo esc_attr( $fields[ 'description_' . $i ] ); ?></textarea>
+							<textarea name="description" class="wis-item description" data-id="description" cols="3" rows="3"><?php echo esc_attr( $fields[ 'description_' . $i ] ); ?></textarea>
 							<label for="image">Bild</label>
-							<input type="hidden" class="item file_image" data-id="file_image" value="<?php echo esc_attr( $image_id ); ?>">
-							<img src="<?php echo wp_get_attachment_url( $image_id ); ?>" class="item image preview-img" data-id="image" alt="">
-							<button value="addImage" class="wis item btn" data-id="upload">Upload Image</button>
+							<input type="hidden" class="wis-item file_image" data-id="file_image" value="<?php echo esc_attr( $image_id ); ?>">
+							<img src="<?php echo wp_get_attachment_url( $image_id ); ?>" class="wis-item wis-image wis-preview-img" data-id="image" alt="">
+							<button value="addImage" class="wis item btn" data-file="<?php echo esc_attr( 'image_' . $i ); ?>" data-id="upload">Upload Image</button>
+							<button value="removeImage" class="wis item btn" data-file="<?php echo esc_attr( 'image_' . $i ); ?>" data-id="remove">Remove Image</button>
 						</div>
-						<div class="order">
-							<span class="item count">Count</span>
+						<div class="wis-order">
+							<span class="wis-item count" data-id="counter">Count</span>
 							<button class="wis" value="up"><i class="dashicons dashicons-arrow-up-alt2"></i></button>
 							<button class="wis" value="down"><i class="dashicons dashicons-arrow-down-alt2"></i></button>
 							<button class="wis" value="remove"><i class="dashicons dashicons-no"></i></button>

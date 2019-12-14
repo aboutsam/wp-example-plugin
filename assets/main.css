@@ -32,9 +32,9 @@ input.wis-item, textarea.wis-item {
 	font-size: 1rem;
 }
 
-input, textarea {
+/* input, textarea {
 	margin-bottom: 0.25rem;
-}
+} */
 
 label.wis {
 	display: block;

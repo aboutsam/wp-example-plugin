@@ -16,6 +16,7 @@ jQuery(function ($) {
     var btn = $(this)
     var val = btn.val()
     var item = btn.closest('.wis-box')
+
     if (val == 'up')
       moveUp(item)
     else if (val == 'down')
@@ -24,6 +25,8 @@ jQuery(function ($) {
       create(item)
     else if (val == 'addImage')
       addImage($(this).data('file'))
+    else if (val == 'removeImage')
+      removeImage($(this).data('file'))  
     else
       remove(item)
 
@@ -102,9 +105,13 @@ jQuery(function ($) {
     wp.media.editor.send.attachment = function (props, attachment) {
       $('#' + item).attr('src', attachment.url)
       $('#file_' + item).attr('value', attachment.id)
-      $('#file_' + item).attr('value', attachment.id)
     }
     wp.media.editor.open();
+  }
+
+  function removeImage(item) {
+    $('#' + item).attr('src', '')
+    $('#file_' + item).attr('value', '')
   }
 })
 

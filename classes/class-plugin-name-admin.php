@@ -235,7 +235,7 @@ if ( ! class_exists( 'Plugin_Name_Admin' ) ) :
 			}
 
 			$fields = array();
-			array_push( $fields, 'count', );
+			array_push( $fields, 'count' );
 			for ( $i = 1; $i <= $post_data['count']; $i++ ) {
 				array_push( $fields, 'name_' . $i, 'title_' . $i, 'description_' . $i, 'file_image_' . $i );
 			}
